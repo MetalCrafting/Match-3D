@@ -5,6 +5,8 @@ using UnityEngine;
 public class CubeDestroyer : MonoBehaviour
 {
     [SerializeField] Collider coll;
+    private Collider[] Neighbours;
+    public GameObject OwnSpawner;
 
     // Start is called before the first frame update
     void Start()
@@ -15,7 +17,17 @@ public class CubeDestroyer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Neighbours.Length >= 2)
+        {
+            // Destroy( coll );
+            while (Neighbours.Length > 0)
+            {
+                long i = Neighbours.Length - 1;
+                CubeDestroyer Neighbour = Neighbours[i].gameObject.GetComponent<CubeDestroyer>();
+                Destroy(Neighbour.OwnSpawner);
+            }
+            Neighbours = null;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -25,6 +37,7 @@ public class CubeDestroyer : MonoBehaviour
             if (other.gameObject.GetComponent<Renderer>().material.color == coll.gameObject.GetComponent<Renderer>().material.color)
             {
                 Debug.Log(other.gameObject.GetComponent<Renderer>().material.color);
+                Neighbours[Neighbours.Length] = other;
             }
         }
     }
