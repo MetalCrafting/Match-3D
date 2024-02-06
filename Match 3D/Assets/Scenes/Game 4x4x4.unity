@@ -1096,6 +1096,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a43b6a1a6d0a084f926110821435e10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Field: {fileID: 979642103}
 --- !u!4 &302083691
 Transform:
   m_ObjectHideFlags: 0
@@ -5948,6 +5949,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Padding: 1
+  inverted: 0
+  speed: 0.25
 --- !u!1 &2059922634
 GameObject:
   m_ObjectHideFlags: 0

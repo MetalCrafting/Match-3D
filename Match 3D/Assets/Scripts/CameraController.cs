@@ -12,8 +12,8 @@ public class CameraController : MonoBehaviour
 
     private void Start()
     {
-        x = x * speed;
-        y = y * speed;
+        x *= speed;
+        y *= speed;
         if (inverted)
         {
             x = -x;
