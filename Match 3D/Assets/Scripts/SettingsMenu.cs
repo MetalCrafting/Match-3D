@@ -12,6 +12,8 @@ public class SettingsMenu : MonoBehaviour
 
     Resolution[] resolutions;
 
+    [SerializeField] GameManager gameManager;
+
     void Start()
     {
         resolutions = Screen.resolutions;
@@ -55,5 +57,11 @@ public class SettingsMenu : MonoBehaviour
     public void SetFullscreen(bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
+    }
+
+    public void ChangeSkybox(int skyboxIndex)
+    {
+        gameManager.skyboxIndex = skyboxIndex;
+        RenderSettings.skybox = gameManager.skyboxes[skyboxIndex];
     }
 }

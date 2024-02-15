@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     private GameObject SecondGameObj = null;
     private Transform SecondTrans = null;
     [SerializeField] float CubeSpeed = 10f;
+    public int skyboxIndex;
+    public Material[] skyboxes;
     
     // Start is called before the first frame update
     void Start()
@@ -51,6 +53,7 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
+        RenderSettings.skybox = skyboxes[skyboxIndex];
     }
 
     public void ResetGame()
