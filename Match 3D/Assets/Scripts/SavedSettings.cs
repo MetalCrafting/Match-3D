@@ -8,4 +8,8 @@ public class SavedSettings : ScriptableObject
 {
     public Material[] skyboxes;
     public int skyboxIndex;
+    public float volume;
+    public int qualityIndex;
+    public bool isFullscreen;
+    public int resolutionIndex;
 }
