@@ -46,7 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Field: {fileID: 0}
   CubeSpeed: 10
-  skyboxIndex: 0
-  skyboxes:
-  - {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 2100000, guid: 860a66ca4259b384f9ec01b687f71c3c, type: 2}
+  savedSettings: {fileID: 11400000, guid: 03cd432e10c0b8e4183701ef842b1c14, type: 2}

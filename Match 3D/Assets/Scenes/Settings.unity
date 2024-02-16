@@ -909,7 +909,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: a48e0ce00976e8548a1660b84d566562, type: 2}
   resolutionDropdown: {fileID: 1667349986}
-  gameManager: {fileID: 0}
+  savedSettings: {fileID: 11400000, guid: 03cd432e10c0b8e4183701ef842b1c14, type: 2}
 --- !u!82 &161518358
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5453,6 +5453,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8788974079122079789, guid: 9692e610f660d3c41b94d406db059dd5, type: 3}
+      propertyPath: savedSettings
+      value: 
+      objectReference: {fileID: 11400000, guid: 03cd432e10c0b8e4183701ef842b1c14, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

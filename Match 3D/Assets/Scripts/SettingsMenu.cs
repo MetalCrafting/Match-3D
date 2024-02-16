@@ -12,7 +12,7 @@ public class SettingsMenu : MonoBehaviour
 
     Resolution[] resolutions;
 
-    [SerializeField] GameManager gameManager;
+    [SerializeField] SavedSettings savedSettings;
 
     void Start()
     {
@@ -61,7 +61,7 @@ public class SettingsMenu : MonoBehaviour
 
     public void ChangeSkybox(int skyboxIndex)
     {
-        gameManager.skyboxIndex = skyboxIndex;
-        RenderSettings.skybox = gameManager.skyboxes[skyboxIndex];
+        savedSettings.skyboxIndex = skyboxIndex;
+        RenderSettings.skybox = savedSettings.skyboxes[skyboxIndex];
     }
 }

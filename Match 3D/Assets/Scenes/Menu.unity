@@ -462,6 +462,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8788974079122079789, guid: 9692e610f660d3c41b94d406db059dd5, type: 3}
+      propertyPath: savedSettings
+      value: 
+      objectReference: {fileID: 11400000, guid: 03cd432e10c0b8e4183701ef842b1c14, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -627,7 +631,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1268697277}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: Play4x4x4
         m_Mode: 1
@@ -863,6 +867,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1227961282}
   m_CullTransparentMesh: 1
+--- !u!114 &1268697277 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8788974079122079789, guid: 9692e610f660d3c41b94d406db059dd5, type: 3}
+  m_PrefabInstance: {fileID: 489316139}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a43b6a1a6d0a084f926110821435e10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1276069305
 GameObject:
   m_ObjectHideFlags: 0
@@ -995,7 +1010,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1268697277}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: ToSettings
         m_Mode: 1
