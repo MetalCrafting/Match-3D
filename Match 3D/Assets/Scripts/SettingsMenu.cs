@@ -18,7 +18,7 @@ public class SettingsMenu : MonoBehaviour
 
     Resolution[] resolutions;
 
-    [SerializeField] SavedSettings savedSettings;
+    [SerializeField] Saves saves;
 
     void Start()
     {
@@ -42,50 +42,55 @@ public class SettingsMenu : MonoBehaviour
         resolutionDropdown.AddOptions(options);
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
-        skyboxDropdown.value = savedSettings.skyboxIndex;
+        skyboxDropdown.value = saves.skyboxIndex;
         skyboxDropdown.RefreshShownValue();
-        graphicsDropdown.value = savedSettings.qualityIndex;
+        graphicsDropdown.value = saves.qualityIndex;
         graphicsDropdown.RefreshShownValue();
-        volumeSlider.value = savedSettings.volume;
+        volumeSlider.value = saves.volume;
     }
 
     public void SetResolution(int resolutionIndex)
     {
         Resolution resolution = resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
-        savedSettings.resolutionIndex = resolutionIndex;
+        saves.resolutionIndex = resolutionIndex;
     }
 
     public void SetVolume(float volume)
     {
         audioMixer.SetFloat("volume", volume);
-        savedSettings.volume = volume;
+        saves.volume = volume;
     }
 
     public void SetQuality(int qualityIndex)
     {
         QualitySettings.SetQualityLevel(qualityIndex);
-        savedSettings.qualityIndex = qualityIndex;
+        saves.qualityIndex = qualityIndex;
     }
 
     public void SetFullscreen(bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
-        savedSettings.isFullscreen = isFullscreen;
+        saves.isFullscreen = isFullscreen;
     }
 
     public void ChangeSkybox(int skyboxIndex)
     {
-        savedSettings.skyboxIndex = skyboxIndex;
-        RenderSettings.skybox = savedSettings.skyboxes[skyboxIndex];
+        saves.skyboxIndex = skyboxIndex;
+        RenderSettings.skybox = saves.skyboxes[skyboxIndex];
     }
 
     public void ResetSettings()
     {
-        savedSettings.skyboxIndex = 1;
-        savedSettings.volume = 0;
-        savedSettings.qualityIndex = 2;
-        savedSettings.isFullscreen = false;
-        savedSettings.resolutionIndex = 16;
+        saves.skyboxIndex = 1;
+        saves.volume = 0;
+        saves.qualityIndex = 2;
+        saves.isFullscreen = false;
+        saves.resolutionIndex = 16;
+    }
+
+    public void ResetScore()
+    {
+        saves.HighScore = 0;
     }
 }

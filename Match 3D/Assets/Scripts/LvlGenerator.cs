@@ -9,6 +9,7 @@ public class LvlGenerator : MonoBehaviour
     [SerializeField] Transform Field;
     [SerializeField] int size;
     private CubeDestroyer Cube;
+    [SerializeField] GameManager gameManager;
     
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,7 @@ public class LvlGenerator : MonoBehaviour
             Instantiate(SpawnCube, S);
             Cube = SpawnCube.GetComponent<CubeDestroyer>();
             Cube.OwnSpawner = S.gameObject;
+            Cube.gameManager = gameManager;
         }
     }
 }

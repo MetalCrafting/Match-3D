@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    [SerializeField] float Padding = 1f;
+    [SerializeField] float Padding = 100f;
     [SerializeField] bool inverted;
     [SerializeField] float speed = 0.25f;
     private Vector3 x = new Vector3(0, -1, 0);

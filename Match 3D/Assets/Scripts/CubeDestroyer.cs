@@ -9,6 +9,8 @@ public class CubeDestroyer : MonoBehaviour
     private Collider[] Neighbours = new Collider[26];
     public GameObject OwnSpawner;
     private int c = 0;
+    public GameManager gameManager;
+    public int colorNum;
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +43,7 @@ public class CubeDestroyer : MonoBehaviour
             Neighbours = null;
             c = 0;
         }
+        gameManager.score++;
     }
 
     private void OnTriggerEnter(Collider other)

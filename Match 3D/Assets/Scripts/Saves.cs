@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Saved Settings", menuName = "Saves/SavedSettings")]
+[CreateAssetMenu(fileName = "Saves", menuName = "Saves")]
 
-public class SavedSettings : ScriptableObject
+public class Saves : ScriptableObject
 {
     public Material[] skyboxes;
     public int skyboxIndex;
@@ -12,4 +12,6 @@ public class SavedSettings : ScriptableObject
     public int qualityIndex;
     public bool isFullscreen;
     public int resolutionIndex;
+
+    public long HighScore;
 }

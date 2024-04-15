@@ -104,7 +104,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.5, y: 1.5, z: 1.5}
+  m_Size: {x: 1.25, y: 1.25, z: 1.25}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &5024855965142782753
 MonoBehaviour:
@@ -120,3 +120,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coll: {fileID: -7578114938385268806}
   OwnSpawner: {fileID: 0}
+  gameManager: {fileID: 0}
+  colorNum: 3
