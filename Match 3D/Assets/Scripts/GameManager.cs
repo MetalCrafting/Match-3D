@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     private GameObject SecondGameObj = null;
     //private Transform SecondTrans = null;
     [SerializeField] Material[] colors;
-    [SerializeField] float CubeSpeed = 10f;
+    // [SerializeField] float CubeSpeed = 10f;
     [SerializeField] Saves saves;
     public long score = 0;
     [SerializeField] Text scoreText;
@@ -94,15 +94,15 @@ public class GameManager : MonoBehaviour
 
     public void SwapCubes(GameObject Cube1, GameObject Cube2/*, Transform Pos1, Transform Pos2*/)
     {
-        int colNum1 = Cube1.GetComponent<CubeDestroyer>().colorNum;
-        int colNum2 = Cube2.GetComponent<CubeDestroyer>().colorNum;
+        int colNum1 = Cube1.gameObject.GetComponent<CubeDestroyer>().colorNum;
+        int colNum2 = Cube2.gameObject.GetComponent<CubeDestroyer>().colorNum;
         Material color1 = colors[colNum1];
         Material color2 = colors[colNum2];
 
         Cube1.GetComponent<MeshRenderer>().material = color2;
         Cube1.GetComponent<CubeDestroyer>().colorNum = colNum2;
         Cube2.GetComponent<MeshRenderer>().material = color1;
-        Cube2.GetComponent<MeshRenderer>().material = color2;
+        Cube2.GetComponent<CubeDestroyer>().colorNum = colNum1;
         /*
         foreach (Transform spawner in Field)
         {
